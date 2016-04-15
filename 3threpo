@@ -37,3 +37,10 @@ summary: 1.@#@ Extra Packages(EPEL)  @#@ The Community   @#@ IUS Community Repo
          2.@#@ GhettoForge           @#@ nux-dextop      @#@ Trinity Desktop Environment 
          
 method: yum clean all && yum clean metadata && yum clean dbcache && yum makecache && yum update
+
+
+
+
+
+
+
