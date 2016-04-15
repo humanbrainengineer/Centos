@@ -1,0 +1,39 @@
+1 step:
+https://wiki.centos.org/AdditionalResources/Repositories
+
+2 step:
+Community Approved Repositories
+These repositories are frequently recommended by the community, are usually well maintained, and provide a substantial number of additional packages to CentOS. They are still not associated with CentOS, but are independent. The above warnings about updates and priorities should still be heeded!
+
+
+@#@ Extra Packages for Enterprise Linux (EPEL) - (See http://fedoraproject.org/wiki/EPEL) provides rebuilds of Fedora packages for EL5, EL6 and EL7. Packages should not replace base, although there have been issues around point releases in the past. You can install EPEL by running yum install epel-release. The epel-release package is included in the CentOS Extras repository that is enabled by default. Support available on Freenode in #epel, on mailing lists, and its issue tracker.
+
+@#@ The Community Enterprise Linux Repository (ELRepo) - (See http://elrepo.org/) focuses on kmod driver packages to enhance hardware support in EL5, EL6, and EL7 (including display, filesystem, hwmon, network, sound, webcam drivers). Newer kernels are also available. Follow the ELRepo Home Page to install the elrepo-release package and import the GPG key. Please see the site for additional details. Support available on Freenode in #elrepo, on mailing lists for ELRepo users and ELRepo development and its issue tracker.
+
+@#@ IUS Community Repo - (See https://ius.io/ - http://lists.centos.org/pipermail/centos-docs/2009-November/003730.html ) provides the "latest upstream versions of PHP, Python, MySQL". It is sponsored by internal work at Rackspace (but officially unsupported). See their Client Usage Guide to install the ius-release package to configure the repo. See their FAQ which frankly discusses pros and cons.
+
+
+---------------------------------------------------
+Other Third Party Repositories
+These repositories are of varying quality. They may be recommended for particular packages, or more broadly, but some may overwrite base packages. Order listed should not be considered an indication of approval. It's alphabetical.
+
+
+agr-free - (see http://rpm.agresearch.co.nz/) provides bioinformatics software for EL6 distributions, x86_64 architecture only. It is managed by AgResearch, New Zealand and contains a large selection of bioinformatics packages & dependencies, as used by scientists at AgResearch. It is designed to be used in combination with the EPEL repository. Full details can be found on the home page.
+
+@#@ GhettoForge - (see http://GhettoForge.org/) provides packages not in other third party repositories or newer versions of packages for EL5 and 6. Packages that overwrite base should only be in the [gf-plus] repository. Please see the usage section of the GhettoForge wiki for information on how to maintain sanity when using the gf-plus packages. Join #ghettoforge on freenode IRC for assistance
+
+LinuxTECH.NET Repositories - (see http://pkgrepo.linuxtech.net/el6/ ) provides Audio / Video related packages with an emphasis on wide support of codecs and as many optional features enabled as possible in all packages. Some additional packages as well. May replace base packages if the "backports" repo is enabled. A repo config is available at: http://pkgrepo.linuxtech.net/el6/release/linuxtech.repo .
+
+@#@ nux-dextop - (see http://li.nux.ro/repos.html) provides desktop and multimedia oriented packages for EL6 and 7. It contains a lot of graphical programs such as Ardour, but also text based apps like Cone. Requires EPEL and should not overwrite base.
+
+RPMfusion Repository - (See http://rpmfusion.org/) provides "software that the Fedora Project or Red Hat doesn't want to ship" for EL5 and 6. Known to replace base packages. Mailing list for RPMfusion users.
+
+The SerNet Samba Repository - (See http://www.sernet.de/en/samba/) German site with updated samba 3 and 4 packages for Centos 5 and 6, along with numerous other packages. Some users have reported success with these packages but caution is advised.
+
+@#@ Trinity Desktop Environment (TDE) - (see http://www.TrinityDesktop.org/about.php ) provides EL5, 6, and 7 packages for a KDE 3.5 style desktop environment. EL5, 6, and 7 yum repositories are available. They have their own support resources to which any Trinity questions should be directed.
+
+
+summary: 1.@#@ Extra Packages(EPEL)  @#@ The Community   @#@ IUS Community Repo 
+         2.@#@ GhettoForge           @#@ nux-dextop      @#@ Trinity Desktop Environment 
+         
+method: yum clean all && yum clean metadata && yum clean dbcache && yum makecache && yum update
